@@ -1,29 +1,111 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styling.css">
-    <title>Nutrient Information</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="description" content="Health Wellbeing Website">
+  <meta name="author" content="TEAM ELITE">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEALTH ELITE</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- Include Google API JavaScript Client Library -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+    // Function to initialize the Fitness API client
+    function initGoogleFit() {
+      gapi.client.init({
+        apiKey: 'AIzaSyDgP3JoWMilh4fb6DWC1kPd1I3Ld6SP3_4', // Replace with your actual API key
+        clientId: '647037879688-p5bog3s7agv892d0iis6j265r50mtoa5.apps.googleusercontent.com', // Replace with your actual client ID
+        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest'],
+        scope: 'https://www.googleapis.com/auth/fitness.activity.read',
+      }).then(function () {
+        // Additional initialization if needed
+      });
+    }
+    // Function to handle user authentication
+    function signInGoogleFit() {
+      gapi.auth2.getAuthInstance().signIn();
+    }
+    // Listen for the API to be loaded and authenticated
+    gapi.load('client:auth2', initGoogleFit);
+</script>
 </head>
 <body>
+  <nav id="nav-bar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#" onclick="signInGoogleFit()">G-Fit</a></li>
+      <li><a href="#">Recipes</a></li>
+      <li><a href="about/about.html">About us</a></li>
+      <li><a href="about.html">About us</a></li>
+    </ul>
+  </nav>
+
+  <section class="home-hero">
     <div class="container">
-        <header>
-            <h1>Nutrient Information</h1>
-        </header>
-        <main>
-            <label for="foodInput">Enter a food item:</label>
-            <div class="search-container">
-                <input type="text" id="foodInput" placeholder="e.g., Banana">
-                <button onclick="searchNutrients()">Search</button>
-            </div>
-            <div id="nutrientResult" class="nutrient-result"></div>
-            <canvas id="nutrientChart" class="nutrient-chart"></canvas>
-        </main>
+      <h1 class="h1-text">Be your healthiest version</h1>
+      <a href="#" onclick="signInGoogleFit()" class="button button-subscribe">G-FIT</a>
+      <p>Sign up now to receive the latest <br>and elite Healthy Choices</p>
     </div>
-    <script src="scripting.js"></script>
+  </section>
+  <hr>
+  <br>
+  <br>
+  <h1>HEALTH</h1>
+  <section class="buttons-section">
+    <div class="button-container">
+      <a href="health/health.html" class="image-button" style="background-image: url('button1.jpg');">
+        <span class="image-button-text"></span>
+      </a>
+      <br>
+      <br>
+      <div class="image-description-container">
+        <span class="image-button-description"><strong>&#8618; Characterized by symptoms or abnormalities that can affect an individual's well-being and may require medical attention or treatment.</strong></span>
+      </div>
+      <br>
+      <br>
+      <h1>NUTRITION FACTS</h1>
+      <a href="health/nutrition.html" class="image-button" style="background-image: url('button2.jpg');">
+        <span class="image-button-text"></span>
+      </a>
+      <br>
+      <br>
+      <div class="image-description-container">
+        <span class="image-button-description"><strong>&#8618; Nutritional composition involves the analysis and understanding of the various nutrients present in a particular food item.</strong></span>
+      </div>
+      <br>
+      <br>
+      <h1>DOCTOR CONSULTATION</h1>
+      <a href="your-link-url3.html" class="image-button" style="background-image: url('button3.png');">
+        <span class="image-button-text"></span>
+      </a>
+      <br>
+      <br>
+      <div class="image-description-container">
+        <span class="image-button-description"><strong>&#8618; Nutritional composition refers to the detailed breakdown of the various nutrients present in a food item. This information serves as a valuable resource for consumers.</strong></span>
+      </div>
+      <br>
+      <br>
+      <h1>FITNESS</h1>
+      <a href="your-link-url4.html" class="image-button" style="background-image: url('button4.jpg');">
+        <span class="image-button-text"></span>
+      </a>
+      <br>
+      <br>
+      <div class="image-description-container">
+        <span class="image-button-description"><strong>&#8618; Fitness is a holistic concept that goes beyond physical activity; it encompasses overall well-being achieved through a combination of regular exercise, balanced nutrition, and adopting a healthy lifestyle.</strong></span>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <section class="getting-started-sec">
+      <p><u>𝙒𝙝𝙚𝙣 𝙬𝙖𝙨 𝙩𝙝𝙚 𝙡𝙖𝙨𝙩 𝙩𝙞𝙢𝙚 𝙮𝙤𝙪 𝙧𝙚𝙘𝙚𝙞𝙫𝙚𝙙 𝙩𝙝𝙚 𝙥𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙞𝙯𝙚𝙙 𝙖𝙩𝙩𝙚𝙣𝙩𝙞𝙤𝙣 𝙮𝙤𝙪 <strong>𝙙𝙚𝙨𝙚𝙧𝙫𝙚</strong>
+          <br> 𝙖𝙣𝙙 𝙩𝙖𝙡𝙠𝙚𝙙 𝙩𝙤 𝙨𝙤𝙢𝙚𝙤𝙣𝙚 𝙖𝙗𝙤𝙪𝙩 𝙮𝙤𝙪𝙧 𝙝𝙚𝙖𝙡𝙩𝙝 ?</u></p>
+      <a href="contact/contact.html" class="button button-contact us">Contact us</a>
+    </section>
+  </div>
+  <footer>
+    <p class="footer_text1">By team<strong> Health elite</strong>🩺❤️</p>
+  </footer>
 </body>
 </html>
-eds
