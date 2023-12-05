@@ -15,7 +15,7 @@ function searchNutrients() {
             if (firstResult) {
                 displayNutrients(firstResult);
             } else {
-                document.getElementById('nutrientResult').innerHTML = 'Nutrient information not found.';
+                document.getElementById('nutrientResult').innerHTML = 'Nutrient information not found in database.';
             }
         })
         .catch(error => console.error('Error:', error));
