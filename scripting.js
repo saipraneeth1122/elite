@@ -1,5 +1,4 @@
 const apiKey = "hRu1iDxZ8UiHwKYZi2jotjKL0a17Aidynftkr6Ad";
-let nutrientChart; // Declare a global variable to store the chart instance
 
 function searchNutrients() {
     const foodInput = document.getElementById('foodInput').value.trim();
@@ -15,10 +14,8 @@ function searchNutrients() {
             const firstResult = data.foods[0];
             if (firstResult) {
                 displayNutrients(firstResult);
-                displayNutrientChart(firstResult);
             } else {
                 document.getElementById('nutrientResult').innerHTML = 'Nutrient information not found.';
-                clearNutrientChart();
             }
         })
         .catch(error => console.error('Error:', error));
@@ -28,84 +25,143 @@ function displayNutrients(food) {
     const nutrientResult = document.getElementById('nutrientResult');
     nutrientResult.innerHTML = `
         <h2>${food.description}</h2>
-        <p>Protein: ${getNutrientValue(food, 'Protein')} g</p>
-        <p>Carbohydrates: ${getNutrientValue(food, 'Carbohydrate, by difference')} g</p>
-        <p>Fat: ${getNutrientValue(food, 'Total lipid (fat)')} g</p>
-        <p>Calories: ${getNutrientValue(food, 'Energy')} kcal</p>
-        <p>Vitamins: ${getNutrientValue(food, 'Vitamins')} mg</p>
-        <p>Minerals: ${getNutrientValue(food, 'Minerals')} mg</p>
-        <p>Essential Amino Acids: ${getNutrientValue(food, 'Essential Amino Acids')} g</p>
-        <p>Essential Fatty Acids: ${getNutrientValue(food, 'Essential Fatty Acids')} g</p>
+        <table>
+            <tr>
+                <th>Nutrient</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+            <tr>
+                <td>Water</td>
+                <td>${getNutrientValue(food, 'Water')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Energy</td>
+                <td>${getNutrientValue(food, 'Energy')}</td>
+                <td>kcal</td>
+            </tr>
+            <tr>
+                <td>Nitrogen</td>
+                <td>${getNutrientValue(food, 'Nitrogen')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Protein</td>
+                <td>${getNutrientValue(food, 'Protein')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Total lipid (fat)</td>
+                <td>${getNutrientValue(food, 'Total lipid (fat)')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Ash</td>
+                <td>${getNutrientValue(food, 'Ash')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Carbohydrate</td>
+                <td>${getNutrientValue(food, 'Carbohydrate')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Fiber, total dietary</td>
+                <td>${getNutrientValue(food, 'Fiber, total dietary')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Citric acid</td>
+                <td>${getNutrientValue(food, 'Citric acid')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Malic acid</td>
+                <td>${getNutrientValue(food, 'Malic acid')}</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>Vitamin C</td>
+                <td>${getNutrientValue(food, 'Vitamin C')}</td>
+                <td>mg</td>
+            </tr>
+            <tr>
+                <td>Thiamin</td>
+                <td>${getNutrientValue(food, 'Thiamin')}</td>
+                <td>mg</td>
+            </tr>
+            <tr>
+                <td>Riboflavin</td>
+                <td>${getNutrientValue(food, 'Riboflavin')}</td>
+                <td>mg</td>
+            </tr>
+            <tr>
+                <td>Niacin</td>
+                <td>${getNutrientValue(food, 'Niacin')}</td>
+                <td>mg</td>
+            </tr>
+            <tr>
+                <td>Carotene, alpha</td>
+                <td>${getNutrientValue(food, 'Carotene, alpha')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>Cryptoxanthin, beta</td>
+                <td>${getNutrientValue(food, 'Cryptoxanthin, beta')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>Cryptoxanthin, alpha</td>
+                <td>${getNutrientValue(food, 'Cryptoxanthin, alpha')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>cis-Lycopene</td>
+                <td>${getNutrientValue(food, 'cis-Lycopene')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>trans-Lycopene</td>
+                <td>${getNutrientValue(food, 'trans-Lycopene')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>cis-Lutein/Zeaxanthin</td>
+                <td>${getNutrientValue(food, 'cis-Lutein/Zeaxanthin')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>Vitamin K (phylloquinone)</td>
+                <td>${getNutrientValue(food, 'Vitamin K (phylloquinone)')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>Vitamin K (Dihydrophylloquinone)</td>
+                <td>${getNutrientValue(food, 'Vitamin K (Dihydrophylloquinone)')}</td>
+                <td>µg</td>
+            </tr>
+            <tr>
+                <td>Vitamin K (Menaquinone-4)</td>
+                <td>${getNutrientValue(food, 'Vitamin K (Menaquinone-4)')}</td>
+                <td>µg</td>
+            </tr>
+
+            <!-- Add other vitamins and components as needed -->
+
+            <!-- Include all other available nutrient categories -->
+            ${food.foodNutrients.map(nutrient => `
+                <tr>
+                    <td>${nutrient.nutrientName}</td>
+                    <td>${nutrient.value}</td>
+                    <td>${nutrient.unitName}</td>
+                </tr>
+            `).join('')}
+        </table>
     `;
 }
 
 function getNutrientValue(food, nutrientName) {
     const nutrient = food.foodNutrients.find(nutrient => nutrient.nutrientName === nutrientName);
-    return nutrient ? nutrient.value : 'Not available';
-}
-
-function displayNutrientChart(food) {
-    // Destroy the existing chart if it exists
-    if (nutrientChart) {
-        nutrientChart.destroy();
-    }
-
-    const nutrients = [
-        'Protein',
-        'Carbohydrate, by difference',
-        'Total lipid (fat)',
-        'Energy',
-        'Vitamins',
-        'Minerals',
-        'Essential Amino Acids',
-        'Essential Fatty Acids'
-    ];
-
-    const nutrientValues = nutrients.map(nutrient => getNutrientValue(food, nutrient));
-
-    const ctx = document.getElementById('nutrientChart').getContext('2d');
-    nutrientChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: nutrients,
-            datasets: [{
-                label: 'Nutrient Values',
-                data: nutrientValues,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)',
-                    'rgba(153, 102, 255, 0.5)',
-                    'rgba(255, 159, 64, 0.5)',
-                    'rgba(210, 105, 30, 0.5)',
-                    'rgba(0, 128, 0, 0.5)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(210, 105, 30, 1)',
-                    'rgba(0, 128, 0, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-}
-
-function clearNutrientChart() {
-    // Clear the canvas manually if needed
-    const ctx = document.getElementById('nutrientChart').getContext('2d');
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    return nutrient ? nutrient.value : '-';
 }
