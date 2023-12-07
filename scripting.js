@@ -25,6 +25,7 @@ function displayNutrients(food) {
     const nutrientResult = document.getElementById('nutrientResult');
     nutrientResult.innerHTML = `
         <h2>${food.description}</h2>
+        <div style="text-align:center;">
         <table>
             <tr>
                 <th>Nutrient</th>
@@ -146,10 +147,6 @@ function displayNutrients(food) {
                 <td>${getNutrientValue(food, 'Vitamin K (Menaquinone-4)')}</td>
                 <td>µg</td>
             </tr>
-
-            <!-- Add other vitamins and components as needed -->
-
-            <!-- Include all other available nutrient categories -->
             ${food.foodNutrients.map(nutrient => `
                 <tr>
                     <td>${nutrient.nutrientName}</td>
@@ -158,6 +155,7 @@ function displayNutrients(food) {
                 </tr>
             `).join('')}
         </table>
+        </div>
     `;
 }
 
