@@ -1,6 +1,4 @@
-/* Your existing CSS styles remain unchanged */
 
-/* Add these styles for the contact page */
 .contact-hero {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("backdrop.jpg");
@@ -71,5 +69,3 @@
 #contact-form button:focus {
   background-color: rgba(91, 197, 64, 0.8);
 }
-
-/* ... (your existing CSS remains unchanged) */
