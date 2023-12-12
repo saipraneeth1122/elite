@@ -14,7 +14,7 @@ header {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Initially set to column for smaller screens */
     padding: 1rem;
 }
 
@@ -24,6 +24,14 @@ main {
     border-radius: 8px;
     margin-bottom: 1rem;
     box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 8px;
 }
 
 .read-more-btn {
