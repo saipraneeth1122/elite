@@ -14,7 +14,7 @@ header {
 
 main {
     display: flex;
-    flex-direction: column; /* Initially set to column for smaller screens */
+    flex-direction: column; /* Keep it as column for smaller screens */
     padding: 1rem;
 }
 
