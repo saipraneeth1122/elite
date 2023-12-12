@@ -13,8 +13,6 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
 }
 
@@ -40,15 +38,15 @@ main {
     border-radius: 4px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
     main {
-        flex-direction: row;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .news-card {
-        width: calc(30% - 1rem); /* Adjust margin and width as needed */
+        width: 40%; /* Adjust width as needed */
         margin-bottom: 1rem;
     }
 }
