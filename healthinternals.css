@@ -23,15 +23,7 @@ main {
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1rem;
-    box-sizing: border-box;
-}
-
-.news-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .read-more-btn {
