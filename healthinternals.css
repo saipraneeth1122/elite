@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: #185eb9;
     color: white;
@@ -15,8 +16,8 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    height: 100vh; /* Set a fixed height, adjust as needed */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    min-height: 100vh; /* Instead of a fixed height, use min-height */
+    overflow-y: auto;
 }
 
 .news-card {
