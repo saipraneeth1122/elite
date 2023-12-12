@@ -43,11 +43,12 @@ main {
 @media only screen and (min-width: 600px) {
     main {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .news-card {
-        width: 30%;
-        margin-bottom: 0;
+        width: calc(30% - 1rem); /* Adjust margin and width as needed */
+        margin-bottom: 1rem;
     }
 }
