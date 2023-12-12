@@ -7,25 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HEALTH ELITE</title>
   <link rel="stylesheet" href="style.css" type="text/css">
-  <!-- Include Google API JavaScript Client Library -->
   <script src="https://apis.google.com/js/api.js"></script>
   <script>
-    // Function to initialize the Fitness API client
     function initGoogleFit() {
       gapi.client.init({
-        apiKey: 'AIzaSyDgP3JoWMilh4fb6DWC1kPd1I3Ld6SP3_4', // Replace with your actual API key
-        clientId: '647037879688-p5bog3s7agv892d0iis6j265r50mtoa5.apps.googleusercontent.com', // Replace with your actual client ID
+        apiKey: 'AIzaSyDgP3JoWMilh4fb6DWC1kPd1I3Ld6SP3_4',
+        clientId: '647037879688-p5bog3s7agv892d0iis6j265r50mtoa5.apps.googleusercontent.com',
         discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest'],
         scope: 'https://www.googleapis.com/auth/fitness.activity.read',
       }).then(function () {
-        // Additional initialization if needed
       });
     }
-    // Function to handle user authentication
     function signInGoogleFit() {
       gapi.auth2.getAuthInstance().signIn();
     }
-    // Listen for the API to be loaded and authenticated
     gapi.load('client:auth2', initGoogleFit);
 </script>
 </head>
@@ -52,7 +47,7 @@
   <h1>HEALTH</h1>
   <section class="buttons-section">
     <div class="button-container">
-      <a href="health.html" class="image-button" style="background-image: url('button1.jpg');">
+      <a href="healthinternals.html" class="image-button" style="background-image: url('button1.jpg');">
         <span class="image-button-text"></span>
       </a>
       <br>
