@@ -43,7 +43,6 @@ hr {
   );
 }
 
-/* Typography */
 a {
   text-decoration: none;
   font-weight: 700;
@@ -96,7 +95,6 @@ nav a:focus {
   }
 }
 
-/* Sticky Style Nav */
 .fixed-nav nav {
   transition-delay: 3s;
   position: fixed;
@@ -104,7 +102,6 @@ nav a:focus {
   max-width: 100%;
 }
 
-/* Home Hero */
 .logo {
   width: 18rem;
   margin-bottom: 1.5rem;
@@ -116,9 +113,6 @@ nav a:focus {
     width: 20rem;
   }
 }
-
-/* Rest of your CSS remains unchanged */
-
 
 /* Buttons */
 .button {
@@ -168,7 +162,6 @@ nav a:focus {
   border-color: rgba(91, 197, 64, 0.88);
 }
 
-/* Navigation Bar */
 nav {
   top: 0;
   width: 100%;
@@ -224,7 +217,6 @@ nav a:focus {
   }
 }
 
-/* Sticky Style Nav */
 .fixed-nav nav {
   transition-delay: 3s;
   position: fixed;
@@ -232,7 +224,6 @@ nav a:focus {
   max-width: 100%;
 }
 
-/* Home Hero */
 .logo {
   width: 18rem;
   margin-bottom: 1.5rem;
@@ -288,7 +279,6 @@ nav a:focus {
   }
 }
 
-/* Home about me box */
 .home-about-textbox {
   background-color: rgb(248, 213, 219);
   padding: 3rem;
@@ -340,7 +330,6 @@ nav a:focus {
   }
 }
 
-/* Getting Started Section CTA */
 .getting-started-sec {
   padding-bottom: 1rem;
 }
@@ -356,7 +345,6 @@ nav a:focus {
   color: #232323;
 }
 
-/* Testimonials carousel */
 .slider {
   position: relative;
   overflow: hidden;
@@ -453,7 +441,7 @@ nav a:focus {
 /* Footer */
 footer {
   margin-top: auto;
-  background-color: #0fcf8f;
+  background-color: rgba(91, 197, 64, 0.88);
   padding: 2rem;
   color: white;
 }
@@ -479,7 +467,6 @@ footer p {
   }
 }
 
-/* Add these styles */
 .buttons-section {
   display: flex;
   justify-content: center;
@@ -491,7 +478,6 @@ footer p {
   display: flex;
 }
 
-/* Add these styles */
 .buttons-section {
   display: flex;
   justify-content: center;
@@ -503,22 +489,20 @@ footer p {
   display: flex;
 }
 
-/* ... (your existing CSS remains unchanged) */
 
-/* Add these styles */
 .buttons-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
-  height: auto; /* Adjusted height */
+  flex-wrap: wrap; 
+  height: auto; 
 }
 
 .button-container {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
+  flex-direction: column;
   align-items: center;
-  margin: 0 -15px; /* Negative margin to counteract padding and margin */
+  margin: 0 -15px;
 }
 
 .image-button {
@@ -533,7 +517,7 @@ footer p {
   border-radius: 8px;
   cursor: pointer;
   transition: opacity 0.3s, transform 0.3s;
-  margin: 15px; /* Add margin to create space between buttons */
+  margin: 15px;
   text-decoration: none;
   color: #232323;
   position: relative;
@@ -557,7 +541,5 @@ footer p {
   background-color: #fff;
   border-radius: 0 0 8px 8px;
   font-size: 0.8rem;
-  margin-top: -1.5rem; /* Adjusted margin */
+  margin-top: -1.5rem;
 }
-
-/* ... (your existing CSS remains unchanged) */
