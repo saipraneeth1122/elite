@@ -7,23 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HEALTH ELITE</title>
   <link rel="stylesheet" href="style.css" type="text/css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="https://apis.google.com/js/api.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://apis.google.com/js/api.js" async defer></script>
   <script>
-    function initGoogleFit() {
-      gapi.client.init({
-        apiKey: 'AIzaSyDgP3JoWMilh4fb6DWC1kPd1I3Ld6SP3_4',
-        clientId: '647037879688-p5bog3s7agv892d0iis6j265r50mtoa5.apps.googleusercontent.com',
-        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest'],
-        scope: 'https://www.googleapis.com/auth/fitness.activity.read',
-      }).then(function () {
-      });
-    }
-    function signInGoogleFit() {
-      gapi.auth2.getAuthInstance().signIn();
-    }
-    gapi.load('client:auth2', initGoogleFit);
+  async function initGoogleFit() {
+    await gapi.client.init({
+      apiKey: 'AIzaSyDgP3JoWMilh4fb6DWC1kPd1I3Ld6SP3_4',
+      clientId: '647037879688-p5bog3s7agv892d0iis6j265r50mtoa5.apps.googleusercontent.com',
+      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest'],
+      scope: 'https://www.googleapis.com/auth/fitness.activity.read',
+    });
+  }
+
+  function signInGoogleFit() {
+    gapi.auth2.getAuthInstance().signIn();
+  }
+
+  gapi.load('client:auth2', initGoogleFit);
 </script>
+
 </head>
 <body>
   <nav id="nav-bar">
@@ -42,67 +44,50 @@
       <p>Sign up now to receive the latest <br>and elite Healthy Choices</p>
     </div>
   </section>
+
   <hr>
-  <br>
-  <br>
-  <h1>HEALTH</h1>
+
   <section class="buttons-section">
     <div class="button-container">
-      <a href="healthinternals.html" class="image-button" style="background-image: url('button1.jpg');">
-        <span class="image-button-text"></span>
-      </a>
-      <br>
-      <br>
+      <!-- Health Button -->
+      <h1>HEALTH</h1>
+      <a href="healthinternals.html" class="image-button" style="background-image: url('button1.jpg');"></a>
       <div class="image-description-container">
-        <span class="image-button-description"><strong>&#8618;Conditions marked by symptoms or abnormalities have the potential to affect an individual's well-being, often requiring medical attention. Treatment may be necessary to address these health issues and restore overall wellness. Recognizing and addressing such conditions is crucial for maintaining a person's health and quality of life.</strong></span>
+        <span class="image-button-description"><strong>&#8618; Conditions marked by symptoms or abnormalities have the potential to affect an individual's well-being, often requiring medical attention. Treatment may be necessary to address these health issues and restore overall wellness. Recognizing and addressing such conditions is crucial for maintaining a person's health and quality of life.</strong></span>
       </div>
-      <br>
-      <br>
+
+      <!-- Nutrition Button -->
       <h1>NUTRITION FACTS</h1>
-      <a href="nutrition.html" class="image-button" style="background-image: url('button2.jpg');">
-        <span class="image-button-text"></span>
-      </a>
-      <br>
-      <br>
+      <a href="nutrition.html" class="image-button" style="background-image: url('button2.jpg');"></a>
       <div class="image-description-container">
         <span class="image-button-description"><strong>&#8618; Nutritional composition entails the examination and comprehension of the diverse nutrients within a specific food item. This analysis is essential for making informed dietary choices and ensuring a well-rounded intake of essential elements for overall health and nutrition.</strong></span>
       </div>
-      <br>
-      <br>
+
+      <!-- Doctor Consultation Button -->
       <h1>DOCTOR CONSULTATION</h1>
-      <a href="health.html" class="image-button" style="background-image: url('button3.png');">
-        <span class="image-button-text"></span>
-      </a>
-      <br>
-      <br>
+      <a href="health.html" class="image-button" style="background-image: url('button3.png');"></a>
       <div class="image-description-container">
         <span class="image-button-description"><strong>&#8618; Nutritional composition offers consumers a comprehensive insight into the specific nutrients present in a food item, facilitating informed dietary decisions. This detailed breakdown is crucial for maintaining balanced nutrition, supporting overall health, and managing specific dietary requirements or conditions.</strong></span>
       </div>
-      <br>
-      <br>
+
+      <!-- Fitness Button -->
       <h1>FITNESS</h1>
-      <a href="health.html" class="image-button" style="background-image: url('button4.jpg');">
-        <span class="image-button-text"></span>
-      </a>
-      <br>
-      <br>
+      <a href="health.html" class="image-button" style="background-image: url('button4.jpg');"></a>
       <div class="image-description-container">
         <span class="image-button-description"><strong>&#8618; Fitness is a holistic concept that transcends mere physical activity, incorporating regular exercise, balanced nutrition, and a healthy lifestyle. This integrated approach aims to optimize overall well-being by addressing physical, mental, and lifestyle factors, emphasizing the interconnected nature of health and fitness.</strong></span>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <hr>
+
+    <div class="container">
+      <section class="getting-started-sec">
+        <p><u>𝙒𝙝𝙚𝙣 𝙬𝙖𝙨 𝙩𝙝𝙚 𝙡𝙖𝙨𝙩 𝙩𝙞𝙢𝙚 𝙮𝙤𝙪 𝙧𝙚𝙘𝙚𝙞𝙫𝙚𝙙 𝙩𝙝𝙚 𝙥𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙞𝙯𝙚𝙙 𝙖𝙩𝙩𝙚𝙣𝙩𝙞𝙤𝙣 𝙮𝙤𝙪 <strong>𝙙𝙚𝙨𝙚𝙧𝙫𝙚</strong><br> 𝙖𝙣𝙙 𝙩𝙖𝙡𝙠𝙚𝙙 𝙩𝙤 𝙨𝙤𝙢𝙚𝙤𝙣𝙚 𝙖𝙗𝙤𝙪𝙩 𝙮𝙤𝙪𝙧 𝙝𝙚𝙖𝙡𝙩𝙝 ?</u></p>
+        <a href="contact.html" class="button button-contact us">Contact us</a>
+      </section>
+    </div>
   </section>
-  <div class="container">
-    <section class="getting-started-sec">
-      <p><u>𝙒𝙝𝙚𝙣 𝙬𝙖𝙨 𝙩𝙝𝙚 𝙡𝙖𝙨𝙩 𝙩𝙞𝙢𝙚 𝙮𝙤𝙪 𝙧𝙚𝙘𝙚𝙞𝙫𝙚𝙙 𝙩𝙝𝙚 𝙥𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙞𝙯𝙚𝙙 𝙖𝙩𝙩𝙚𝙣𝙩𝙞𝙤𝙣 𝙮𝙤𝙪 <strong>𝙙𝙚𝙨𝙚𝙧𝙫𝙚</strong>
-          <br> 𝙖𝙣𝙙 𝙩𝙖𝙡𝙠𝙚𝙙 𝙩𝙤 𝙨𝙤𝙢𝙚𝙤𝙣𝙚 𝙖𝙗𝙤𝙪𝙩 𝙮𝙤𝙪𝙧 𝙝𝙚𝙖𝙡𝙩𝙝 ?</u></p>
-      <a href="contact.html" class="button button-contact us">Contact us</a>
-    </section>
-  </div>
+
   <footer>
     <p class="footer_text1">By team<strong> Health elite</strong>🩺❤️</p>
   </footer>
