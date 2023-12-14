@@ -1,34 +1,43 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
-
 header {
     background-color: #185eb9;
     color: white;
     text-align: center;
-    padding: 0.5rem;
-}
-
-main {
     padding: 1rem;
 }
-
-.news-card {
-    width: 100%;
-    margin-bottom: 1rem;
+h1 {
+    margin: 0;
 }
-
-.news-card img {
+p {
+    margin-top: 0.5rem;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.health-card {
+    flex: 1;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+.health-card img {
     width: 100%;
     height: auto;
     object-fit: cover;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
-
 .read-more-btn {
     display: inline-block;
     background-color: rgb(2, 124, 2);
@@ -37,16 +46,8 @@ main {
     text-decoration: none;
     border-radius: 4px;
 }
-
-@media only screen and (min-width: 500px) {
-    main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .news-card {
-        width: 40%; /* Adjust width as needed */
-        margin-bottom: 1rem;
+@media only screen and (max-width: 600px) {
+    .health-card {
+        flex: 1 0 100%;
     }
 }
