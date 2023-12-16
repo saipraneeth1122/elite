@@ -86,7 +86,6 @@ a {
   transform: rotate(0) translateX(0);
 }
 
-/* Navigation Styles */
 nav {
   position: relative;
   padding: 1.5rem 0;
@@ -119,7 +118,6 @@ nav .grid > [class*="column-"] {
   margin: 0;
 }
 
-/* Footer Styles */
 footer {
   text-align: center;
 }
